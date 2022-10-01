@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задача 1");
         task1();
-        System.out.println("Задача2");
+        System.out.println("Задача 2");
         task2();
         System.out.println("Задача 3");
         task3();
@@ -12,6 +12,10 @@ public class Main {
         task5();
         System.out.println("Задача 6");
         task6();
+        System.out.println("Задача 7");
+        task7();
+        System.out.println("Задача 8");
+        task8();
     }
     public static void task1() {
         int a = 232;
@@ -90,5 +94,29 @@ public class Main {
         double kg = 1000;
         double commonWeightKg = commonWeight / kg;
         System.out.println("Спорт-завтрак весит " + commonWeightKg + " килограмм");
+    }
+    public static void task7() {
+        short needfulLossKg = 7; // Масса в кг
+        short needfulLossGr = 7000; // Масса в гр
+        short inDay250Gr = 250;
+        short inDay500Gr = 500;
+        int daysLosing250 = needfulLossGr / inDay250Gr;
+        int daysLosing500 = needfulLossGr / inDay500Gr;
+        int daysLosingMedium = (daysLosing500 + daysLosing250) / 2;
+        System.out.println(daysLosing250 + " дней потребуется, если сбрасывать по 250 гр. в день\n" + daysLosing500 + " дней потребуется, если сбрасывать по 500гр. в день\n" + daysLosingMedium + " в среднем по требуется дней");
+    }
+    public static void task8() {
+        int mashaSalary = 67760;
+        int denisSalary = 83690;
+        int kristinaSalary = 76230;
+        double mashaSalaryUpper = mashaSalary * 0.1 + mashaSalary;
+        double denisSalaryUpper = denisSalary * 0.1 + denisSalary;
+        double kristinaSalaryUpper = kristinaSalary * 0.1 + kristinaSalary;
+        double mashaSalaryDiff = mashaSalaryUpper - mashaSalary;
+        double denisSalaryDiff = denisSalaryUpper - denisSalary;
+        double kristinaSalaryDiff = kristinaSalaryUpper - kristinaSalary;
+        System.out.println("Маша теперь получает " +mashaSalaryUpper+ " рублей. Годовой доход вырос на "+mashaSalaryDiff+" рублей");
+        System.out.println("Денис теперь получает "+denisSalaryUpper+" рублей. Годовой доход вырос на "+denisSalaryDiff+" рублей");
+        System.out.println("Кристина теперь получает "+kristinaSalaryUpper+" рублей. Годовой доход вырос на "+kristinaSalaryDiff+" рублей");
     }
 }
